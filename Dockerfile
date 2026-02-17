@@ -1,4 +1,4 @@
-FROM ghcr.io/cyberjutsu/maven-tomcat-jdk:3.6.3-8.5.35-8.0.131-open
+FROM openjdk:8-jdk
 
 RUN echo "{FAKE_FLAG}" >> /flag && chmod 444 /flag
 
