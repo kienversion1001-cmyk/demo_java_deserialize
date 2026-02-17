@@ -1,0 +1,14 @@
+services:
+  deserialize:
+    container_name: java-deserialize-workshop
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - "./src/java_deserialization:/usr/local/tomcat/java_deserialization"
+      - "./src/debug-java-web:/usr/local/tomcat/debug-java-web"
+      - "./logs:/usr/local/tomcat/logs"
+    restart: always
+    ports:
+      - "13337:8080"
+      - "5005:5005"
